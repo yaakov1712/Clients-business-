@@ -1,7 +1,10 @@
 // Service worker: שומר את קבצי האפליקציה כדי שתעבוד בלי אינטרנט.
 // בכל שינוי בקבצים – להעלות את מספר הגרסה.
-const CACHE = 'handyman-v1';
-const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
+const CACHE = 'handyman-v2';
+const FILES = ['./', 'index.html', 'styles.css', 'manifest.webmanifest',
+  'js/core.js', 'js/xlsx.js', 'js/import26.js', 'js/ui.js', 'js/views-main.js', 'js/views-money.js', 'js/views-cal.js', 'js/views-more.js',
+  'fonts/rubik-hebrew-wght-normal.woff2', 'fonts/rubik-latin-wght-normal.woff2',
+  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
