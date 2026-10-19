@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f6f5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="העסק שלי">
+  <title>העסק שלי</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="brand">🛠️ העסק שלי</a>
+    <div class="top-actions">
+      <a href="#caller" class="icon-btn" title="שיחה נכנסת / חיפוש מספר">📞</a>
+      <a href="#more" class="icon-btn" title="הגדרות ועוד">⚙️</a>
+    </div>
+  </header>
+
+  <main id="app"><p class="loading">טוען…</p></main>
+
+  <a href="#job/new" class="fab" title="פנייה / עבודה חדשה">＋</a>
+
+  <nav class="bottomnav">
+    <a href="#home" data-nav="home"><span>🏠</span>בית</a>
+    <a href="#jobs" data-nav="jobs"><span>🧰</span>עבודות</a>
+    <a href="#clients" data-nav="clients"><span>👥</span>לקוחות</a>
+    <a href="#reports" data-nav="reports"><span>📊</span>סיכומים</a>
+    <a href="#cash/biz" data-nav="cash"><span>💰</span>תזרים</a>
+  </nav>
+
+  <dialog id="dlg"></dialog>
+  <div id="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
